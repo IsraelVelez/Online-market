@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mynavigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.onlinemarketproject.fragment.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_productFragment"
+            app:destination="@id/productFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_categoryFragment"
+            app:destination="@id/categoryFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_cartFragment"
+            app:destination="@id/cartFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productFragment"
+        android:name="com.example.onlinemarketproject.fragment.ProductFragment"
+        android:label="fragment_product"
+        tools:layout="@layout/fragment_product" >
+        <action
+            android:id="@+id/action_productFragment_to_cartFragment"
+            app:destination="@id/cartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.example.onlinemarketproject.fragment.CategoryFragment"
+        android:label="CategoryFragment" >
+        <action
+            android:id="@+id/action_categoryFragment_to_productFragment"
+            app:destination="@id/productFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.example.onlinemarketproject.fragment.CartFragment"
+        android:label="CartFragment" >
+
+        <action
+            android:id="@+id/action_cartFragment_to_loginUserFragment"
+            app:destination="@id/loginUserFragment" />
+<!--        <action-->
+<!--            android:id="@+id/action_cartFragment_to_signUpUserFragment"-->
+<!--            app:destination="@id/signUpUserFragment" />-->
+    </fragment>
+    <fragment
+        android:id="@+id/loginUserFragment"
+        android:name="com.example.onlinemarketproject.fragment.LoginUserFragment"
+        android:label="fragment_login_user"
+        tools:layout="@layout/fragment_login_user" >
+        <action
+            android:id="@+id/action_loginUserFragment_to_cartFragment"
+            app:destination="@id/cartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.onlinemarketproject.fragment.SearchFragment"
+        android:label="SearchFragment" >
+        <action
+            android:id="@+id/action_searchFragment_to_productFragment"
+            app:destination="@id/productFragment" />
+    </fragment>
+    <!--    <fragment-->
+<!--        android:id="@+id/signUpUserFragment"-->
+<!--        android:name="com.example.onlinemarketproject.fragment.SignUpUserFragment"-->
+<!--        android:label="fragment_sign_up_user"-->
+<!--        tools:layout="@layout/fragment_sign_up_user" >-->
+<!--        <action-->
+<!--            android:id="@+id/action_signUpUserFragment_to_loginUserFragment"-->
+<!--            app:destination="@id/loginUserFragment" />-->
+<!--    </fragment>-->
+</navigation>
